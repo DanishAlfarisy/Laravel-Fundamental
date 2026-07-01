@@ -29,6 +29,24 @@ class HobbyController extends Controller
             ->route('hobbies.index')
             ->with('success', 'Hobi berhasil ditambahkan.');
     }
+
+    public function edit(Hobby $hobby)
+    {
+    return view('hobbies.edit', compact('hobby'));
+    }
+
+    public function update(Request $request, Hobby $hobby)
+    {
+      $validated = $request->validate([
+    'hobi' => 'required|max:50',
+]);
+
+    $hobby->update($validated);
+
+    return redirect()
+        ->route('hobbies.index')
+        ->with('success', 'Hobi berhasil diperbarui.');
+    }
     
     public function destroy(Hobby $hobby){
     $hobby->delete();

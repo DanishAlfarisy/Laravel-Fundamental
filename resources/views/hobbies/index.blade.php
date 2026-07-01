@@ -36,7 +36,10 @@
                 <td>{{ $hobby->profile->nama_lengkap }}</td>
                 <td>{{ $hobby->hobi }}</td>
                 <td>
-                    <form action="{{ route('hobbies.destroy', $hobby->id) }}" method="POST">
+                    <a href="{{ route('hobbies.edit', $hobby->id) }}" class="btn btn-warning">
+                        Edit
+                        </a>
+                    <form action="{{ route('hobbies.destroy', $hobby->id) }}"method="POST" style="display: inline;">
                         @csrf
                         @method('DELETE')
 
