@@ -54,6 +54,11 @@
             color: white;
         }
 
+        .btn-biru {
+            background: #2b3cc0;
+            color: white;
+        }
+
         .btn-warning {
             background: #f39c12;
             color: white;

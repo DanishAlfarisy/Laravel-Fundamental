@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
     <h1>Edit Hobi</h1>
-
-
 <form action="{{ route('hobbies.update',$hobby->id) }}" method="POST">
         @csrf
         @method('PUT')

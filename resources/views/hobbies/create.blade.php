@@ -1,10 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <h1>Tambah Hobi</h1>
-
 <form action="{{ route('hobbies.store') }}" method="POST">
         @csrf
-
         <label>Nama Profile</label>
 <select name="profile_id">
     <option value="">-- Pilih Profile --</option>

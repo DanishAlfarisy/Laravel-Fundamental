@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HobbyController;
@@ -8,6 +10,8 @@ Route::get('/', function () {
 });
 
 Route::resource('profiles', ProfileController::class);
+
+Route::resource('companies', CompanyController::class);
 
 Route::get('/hobbies', [HobbyController::class, 'index'])
     ->name('hobbies.index');
